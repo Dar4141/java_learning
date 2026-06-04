@@ -1,14 +1,38 @@
 public class Application{
-    String appId;
-    String appName;
-    String protocol;
-    boolean isActive;
+    private String appId;
+    private String appName;
+    private String protocol;
+    private boolean isActive;
 
-    public Application(String appId, String appName, String protocol, Boolean isActive) {
+    public Application(String appId, String appName, String protocol, boolean isActive) {
         this.appId = appId;
         this.appName = appName;
         this.protocol = protocol;
         this.isActive = isActive;
+    }
+
+    public String getAppId() {return appId;}
+
+    public void setAppId(String appId){
+        this.appId= appId;
+    }
+
+    public String getAppName() {return appName;}
+
+    public void setAppName(String appName){
+        this.appName= appName;
+    }
+
+    public String getProtocol() {return protocol;}
+
+    public void setProtocol(String protocol){
+        this.protocol= protocol;
+    }
+
+    public boolean getIsActive() {return isActive;}
+
+    public void setIsactive(boolean isActive){
+        this.isActive= isActive;
     }
 
     public void activateApp() {
@@ -23,10 +47,6 @@ public class Application{
 
     public boolean checkifActive(){
         return isActive;
-    }
-
-    public String getProtocol(){
-        return protocol;
     }
 
     @Override

@@ -37,8 +37,8 @@ class User {
 
             for (Application app :assignedApplications){
             System.out.println(
-                "App: " + app.appName +
-                "| Protocol: " +app.protocol + "\n"
+                "App: " + app.getAppName() +
+                "| Protocol: " +app.getProtocol() + "\n"
             );
             
             }
