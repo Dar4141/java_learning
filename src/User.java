@@ -22,8 +22,10 @@ class User {
         this.status = status;
 
     }
-
-    public void assignedApplication(Application app) {
+    public void assignedApplication(Application app){
+        if(app == null){
+            throw new IllegalArgumentException("Cannot assign a null app to user" + userName);
+        }
         assignedApplications.add(app);
     }
 
