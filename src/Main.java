@@ -29,11 +29,21 @@ public class Main {
         darshan.displayUser();
         darsh.displayUser();
         System.out.println(salesforce.getAppId());
-
+        
         try{
             darshan.assignedApplication(null);
         }catch (IllegalArgumentException e){
             System.out.println("Error: " + e.getMessage());
+        }finally{
+            System.out.println("Provisioning attempt logged for user");
+        }
+
+        try{
+            darshan.assignedApplication(salesforce);
+        }catch (IllegalArgumentException e){
+            System.out.println("Error: " + e.getMessage());
+        }finally{
+            System.out.println("Provisioning attempt logged for user");
         }
     }
 }
